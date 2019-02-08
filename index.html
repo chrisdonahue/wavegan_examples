@@ -1,0 +1,578 @@
+
+<html>
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="audio/https://www.googletagmanager.com/gtag/js?id=UA-50109714-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-50109714-4');
+</script>
+
+<title>WaveGAN sound examples</title>
+<style>
+body {
+  max-width: 820px;
+}
+a {
+  text-decoration:  none;
+}
+</style>
+</head>
+
+<h1><i>Adversarial Audio Synthesis</i> (ICLR 2019) sound examples</h1>
+<h2><a href="https://chrisdonahue.github.io">Chris Donahue</a>, <a href="http://cseweb.ucsd.edu/~jmcauley/">Julian McAuley</a>, <a href="http://msp.ucsd.edu">Miller Puckette</a></h2>
+
+<p>We present sound examples from our WaveGAN and SpecGAN models (<a href="https://arxiv.org/abs/1802.04208">paper</a>, <a href="https://github.com/chrisdonahue/wavegan">code</a>). Each sound file represents fifty examples of one second in length concatenated together, with a half second of silence after each example. All models are trained in the unsupervised setting and results here are a random sampling of fifty latent vectors.</p>
+
+<p>To generate more examples with these same models, see our <a href="https://colab.research.google.com/drive/1e9o2NB2GDDjadptGr3rwQwTcw-IrFOnm">interactive notebook on Google Colab</a>. We also built a <a href="https://chrisdonahue.com/wavegan">browser-based procedural drum machine</a> out of our WaveGAN trained on drums.</p>
+
+<h2>Speech Commands Zero through Nine (SC09)</h2>
+
+The SC09 dataset, a subset of the <a href="https://research.googleblog.com/2017/08/launching-speech-commands-dataset.html">Speech Commands</a> dataset (<a href="https://creativecommons.org/licenses/by/4.0/">license</a>), has many speakers and a ten word vocabulary. When trained on this dataset <i>without</i> label conditioning, our WaveGAN and SpecGAN models learn to generate coherent words. Results are arranged into numerical ordering by post-hoc labeling of random examples by the classifier discussed in the paper.
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_sc09.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_sc09.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/specgan_sc09.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Bird vocalizations</h2>
+
+Bird vocalizations collected from <a href="https://www.xeno-canto.org/contributor/OOECIWCSWV">Peter Boesman</a> (<a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">license</a>)</li>
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_birds.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_birds.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/specgan_birds.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Drums</h2>
+
+Single drum hits from drum machines collected from <a href="http://www.hexawe.net/mess/200.Drum.Machines/drums.zip">here</a></li>
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_drums.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_drums.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/specgan_drums.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Piano</h2>
+
+Professional pianist playing a variety of Bach compositions (original dataset collected for this work by the authors)
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_piano.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_piano.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/specgan_piano.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+<b>Bonus</b>: With our <a href="https://github.com/chrisdonahue/wavegan">updated codebase supporting longer audio slices</a>, we trained a WaveGAN on four-second slices from Art Tatum's <i>Solo Masterpieces, Vol 1-8</i>.
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_tatum.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_tatum.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+</ul>
+
+<h2>Large vocabulary speech (TIMIT)</h2>
+
+The <a href="https://catalog.ldc.upenn.edu/ldc93s1">TIMIT</a> dataset consists of many speakers reading English sentences. Recording conditions were carefully controlled and the utterances have much less noise than those from SC09.
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_timit.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/wavegan_timit.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/specgan_timit.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Real data resynthesized with Griffin-Lim</h2>
+
+The SpecGAN model operates on lossy audio spectrograms. As a point of comparison, we provide examples of the real data projected into this domain and resynthesized back into audio. This is useful to gauge roughly how much distortion may be caused by the audio feature represention vs. the SpecGAN generative process itself.
+
+
+<ul>
+
+<li>
+<span class="desc">
+  SC09
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/gl_sc09.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  Birds
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/gl_birds.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  Drums
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/gl_drums.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  Piano
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/gl_piano.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  Timit
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/gl_timit.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Quantitative evaluation experiments</h2>
+
+We also provide examples for all models in Table 1 of our paper.
+
+
+<ul>
+
+<li>
+<span class="desc">
+  Real data
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/real_sc09.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  Parametric (Buchanan 2017)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_parametric.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN + phase shuffle (n=2)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan_ps2.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN + phase shuffle (n=4)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan_ps4.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN + nearest neighbor
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan_nn.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN + post-processing filter
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan_pp.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveGAN + dropout
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavegan_dropout.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_specgan.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SpecGAN + phase shuffle (n=1)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_specgan_ps1.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+
+<h2>Comparison to existing methods</h2>
+
+<p style="color:red;"><b>WARNING: Loud volume</b></p>
+
+On the SC09 dataset, we also compare to two other methods, <a href="https://arxiv.org/abs/1609.03499">WaveNet</a> (van den Oord et al. 2016) and <a href="https://arxiv.org/abs/1612.07837">SampleRNN</a> (Mehri et al. 2017) that learn to generate audio in the unsupervised setting. While these implementations are known to produce excellent audio when trained on longer speech slices captured under clean recording conditions, none appear to produce semantically-meaningful results for our single-word SC09 dataset.
+
+
+<ul>
+
+<li>
+<span class="desc">
+  WaveNet (van den Oord et al. 2016) public implementation 1 (<a href="https://github.com/ibab/tensorflow-wavenet">link</a>)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavenet_ibab.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  WaveNet (van den Oord et al. 2016) public implementation 2 (<a href="https://github.com/r9y9/wavenet_vocoder">link</a>)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_wavenet_r9y9.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+
+<li>
+<span class="desc">
+  SampleRNN (Mehri et al. 2017) official implementation 1 (<a href="https://github.com/soroushmehr/sampleRNN_ICLR2017">link</a>)
+</span>
+<div class="example">
+  <audio controls>
+  <source src="audio/quant_samplernn.wav" type="audio/wav">
+  Your browser does not support the audio tag.
+</audio>
+</div>
+</li>
+
+</ul>
+
+<h2>Attribution</h2>
+
+<p>If you reference our work in your research, cite via the following BibTeX:</p>
+
+<pre><code>@inproceedings{donahue2019wavegan,
+  title={Adversarial Audio Synthesis},
+  author={Donahue, Chris and McAuley, Julian and Puckette, Miller},
+  booktitle={ICLR},
+  year={2019}
+}</code></pre>
+
+</body>
+</html>
+
